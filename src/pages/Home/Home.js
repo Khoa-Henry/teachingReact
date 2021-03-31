@@ -5,6 +5,14 @@ import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 import {Grid} from '@material-ui/core';
 import Accordion from '../../components/Accordion/Accordion';
+import AboutYou from '../AboutYou/AboutYou';
+import Calendar from '../Calendar/Calendar';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 function Home(){
     const [firstNames, setFirstNames] = React.useState(['henry','jason','alexa','khalil']);
@@ -15,6 +23,21 @@ function Home(){
     }
 
     return(
+        <div>
+            <Router>
+        <Switch>
+          <Route path="/aboutyou">
+            <AboutYou />
+          </Route>
+          <Route path="/calendar">
+            <Calendar />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      {/* </div> */}
+    </Router>
         <Grid container spacing={3}>
             <Button buttonName="Back" color="blue" onClick={changefirstName}/>
             <Button buttonName="Play" color="pink"/>
@@ -37,6 +60,7 @@ function Home(){
                 </div>
             )}
         </Grid>
+        </div>
     )
 }
 
