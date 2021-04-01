@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
+    textAlign: 'center',
     fontWeight: theme.typography.fontWeightRegular,
   },
 }));

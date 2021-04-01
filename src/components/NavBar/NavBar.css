@@ -1,0 +1,21 @@
+.hey {
+    color: blue;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    color: blue;
+}
+  
+    .nav-link {
+      padding-right: 0;
+      padding-left: 0;
+      color: 'green';
+    }
+  
+    .dropdown-menu {
+      position: static;
+    }

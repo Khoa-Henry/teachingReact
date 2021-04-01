@@ -1,4 +1,5 @@
 import React from "react";
+import './AboutYou.css';
 
 class AboutYou extends React.Component{
     constructor(){
@@ -11,7 +12,7 @@ class AboutYou extends React.Component{
     render(){
         return(
             <div>
-                <h2>{this.state.name}</h2>
+                <h2 className="AboutYou">ABout you </h2>
             </div>
         )
     }
